@@ -1,5 +1,5 @@
 // const express = require("express");
-import "dotenv/config";
+import dotenv from "dotenv";
 import express from "express";
 import HelloRoutes from "./hello.js";
 import Lab5 from "./lab5.js";
@@ -10,6 +10,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 import UserRoutes from "./users/routes.js";
 import session from "express-session";
+
+dotenv.config();
 
 const CONNECTION_STRING =
   process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas";
